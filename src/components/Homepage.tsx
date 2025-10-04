@@ -4,11 +4,11 @@ Bondre'S Laundry — React + Tailwind Homepage (single-file React component)
 How to use:
 1. Place this file in your React app (e.g. src/components/Homepage.jsx).
 2. Ensure TailwindCSS is configured in your project.
-3. Install framer-motion if you want animations: `npm install framer-motion` (optional).
+3. Install framer-motion if you are want animations: `npm install framer-motion` (optional).
 4. Replace the PHONE_NUMBER, WHATSAPP_NUMBER and ADDRESS placeholders below with real data.
 
 Notes:
-- Phone and WhatsApp use tel: and https://wa.me/ formats respectively.
+- Phone and WhatsApp use tel : and https://wa.me/ formats respectively.
 - The color theme uses orange & white (warm & local) throughout Tailwind classes.
 */
 
