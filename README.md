@@ -30,7 +30,7 @@ It includes pages for Home, About, and Services — all styled in a warm orange 
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/bondres-the-laundry-house.git
+git clone https://github.com/ROHITMAGDUM2/bondres-the-laundry-house.git
 cd bondres-the-laundry-house
 ```
 
