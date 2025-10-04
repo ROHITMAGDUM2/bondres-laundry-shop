@@ -1,34 +1,20 @@
-/*
-Bondre'S Laundry — React + Tailwind Homepage (single-file React component)
-
-How to use:
-1. Place this file in your React app (e.g. src/components/Homepage.jsx).
-2. Ensure TailwindCSS is configured in your project.
-3. Install framer-motion if you are want animations: `npm install framer-motion` (optional).
-4. Replace the PHONE_NUMBER, WHATSAPP_NUMBER and ADDRESS placeholders below with real data.
-
-Notes:
-- Phone and WhatsApp use tel : and https://wa.me/ formats respectively.
-- The color theme uses orange & white (warm & local) throughout Tailwind classes.
-*/
-
 import React from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 // === REPLACE THESE PLACEHOLDERS ===
-const PHONE_NUMBER = "+91-9527198630"; // e.g. +91-9876543210
-const WHATSAPP_NUMBER = "+919527198630"; // wa.me format (no + or dashes also works with +)
-const ADDRESS = "Bondre'S Laundry, Thite Vasti, Kharadi, Pune";
+const PHONE_NUMBER = "+91-9527198630";
+const WHATSAPP_NUMBER = "+919527198630";
+const ADDRESS = "Bondre'S The Laundry House, Thite Wasti, Kharadi, Pune";
 // ==================================
 
 type Service = { title: string; desc: string; price: string };
 
 function Homepage() {
   const services: Service[] = [
-    { title: "Washing & Ironing", desc: "Clothes washed and ironed neatly", price: "₹50/kg" },
-    { title: "Dry Cleaning", desc: "Professional dry cleaning for special garments", price: "₹150/item" },
-    { title: "Pickup & Delivery", desc: "Free for orders above ₹200", price: "—" },
+    { title: "Washing & Ironing", desc: "Clothes washed and ironed neatly", price: "₹95/kg" },
+    { title: "Dry Cleaning", desc: "Professional dry cleaning for special garments", price: "₹110/item" },
+    { title: "Pickup & Delivery", desc: "Free for orders above ₹250", price: "—" },
   ];
 
   return (
@@ -40,7 +26,7 @@ function Homepage() {
         <div className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-orange-600">Fresh Clothes, Fresh Start</h2>
-            <p className="mt-4 text-gray-600">Reliable local laundry & dry-cleaning with doorstep pickup and fastest delivery options. Trusted by families across the neighborhood.</p>
+            <p className="mt-4 text-gray-600">Reliable local laundry & dry-cleaning with doorstep pickup and fastest delivery options. Trusted by families across the neighbourhood.</p>
 
             <div className="mt-6 flex flex-wrap gap-3">
               <a href={`tel:${PHONE_NUMBER}`} className="px-5 py-3 rounded-lg bg-orange-600 text-white font-semibold shadow">Book Now</a>
@@ -92,7 +78,7 @@ function Homepage() {
       <section className="bg-orange-50">
         <div className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold text-gray-800">Why Bondre'S Laundry?</h3>
+            <h3 className="text-2xl font-bold text-gray-800">Why Bondre'S The Laundry House?</h3>
             <p className="text-gray-600 mt-2">We combine local care with professional standards — quick turnarounds and transparent pricing.</p>
 
             <ul className="mt-6 space-y-4">
@@ -139,17 +125,17 @@ function Homepage() {
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-6">
           <div className="p-6 rounded-xl border border-orange-100">
             <h4 className="font-semibold">Basic Wash</h4>
-            <div className="mt-3 text-2xl font-bold">₹50/kg</div>
+            <div className="mt-3 text-2xl font-bold">₹95/kg</div>
             <p className="text-sm text-gray-600 mt-2">Washing, drying & ironing.</p>
           </div>
           <div className="p-6 rounded-xl border border-orange-100">
             <h4 className="font-semibold">Dry Clean</h4>
-            <div className="mt-3 text-2xl font-bold">₹150/item</div>
+            <div className="mt-3 text-2xl font-bold">₹110/item</div>
             <p className="text-sm text-gray-600 mt-2">For delicate & special garments.</p>
           </div>
           <div className="p-6 rounded-xl border border-orange-100">
             <h4 className="font-semibold">Pickup & Delivery</h4>
-            <div className="mt-3 text-2xl font-bold">Free over ₹200</div>
+            <div className="mt-3 text-2xl font-bold">Free over ₹250</div>
             <p className="text-sm text-gray-600 mt-2">Fast doorstep pickup & drop.</p>
           </div>
         </div>
