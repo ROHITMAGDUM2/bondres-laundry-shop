@@ -2,7 +2,7 @@ import React from "react";
 
 const PHONE_NUMBER = "+91-9527198630";
 const WHATSAPP_NUMBER = "+919527198630";
-const ADDRESS = "Bondre'S Laundry, Thite Vasti, Kharadi, Pune";
+const ADDRESS = "Bondre'S The Laundry House, Thite Wasti, Kharadi, Pune";
 
 function Navbar() {
     return (

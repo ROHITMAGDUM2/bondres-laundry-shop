@@ -1,44 +1,134 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# React + Vite
+# 🧺 Bondre’s The Laundry House
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Fresh Clothes, Fresh Start — Bondre’s The Laundry House**
 
-Currently, two official plugins are available:
+A modern, mobile-friendly website built with **React** and **TailwindCSS**, designed for a local laundry service.  
+It includes pages for Home, About, and Services — all styled in a warm orange & white theme for a friendly and professional feel.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🧼 **Responsive Design** — Works beautifully on phones, tablets, and desktops  
+- 🧺 **Clean & Simple UI** — Orange & white theme with professional layout  
+- 🚪 **Doorstep Pickup/Delivery CTA** — Quick contact via call or WhatsApp  
+- 💬 **Framer Motion Animations** — Smooth fade and slide effects  
+- 🧾 **Separate Pages** — Home, About, and Services (easily expandable)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# bondres-laundry-shop
-Bondre's Laundry was founded byLaxman Bondre with one goal in mind — to make laundry simple, affordable, and reliable for local families. What started as a small neighborhood service has grown into a trusted name in Pune, thanks to our consistent quality and quick service.
->>>>>>> 1eb5f6b (Initial commit)
-=======
-# bondres-laundry-shop
-Bondre's Laundry was founded byLaxman Bondre with one goal in mind — to make laundry simple, affordable, and reliable for local families. What started as a small neighborhood service has grown into a trusted name in Pune, thanks to our consistent quality and quick service.
-=======
-# React + Vite
+## 🧩 Tech Stack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- **React 18+**
+- **TailwindCSS 3+**
+- **Framer Motion** (for smooth animations)
+- *(Optional)* **React Router DOM** for navigation
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚙️ Setup Instructions
 
-## React Compiler
+### 1. Clone the Repository
+```bash
+git clone https://github.com/yourusername/bondres-the-laundry-house.git
+cd bondres-the-laundry-house
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. Install Dependencies
+```bash
+npm install
+```
 
-## Expanding the ESLint configuration
+### 3. Add TailwindCSS (if not preconfigured)
+If Tailwind is not already set up:
+```bash
+npx tailwindcss init -p
+```
+Then configure `tailwind.config.js` and add Tailwind imports to `index.css`:
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
->>>>>>> f23f838 (First Commit)
->>>>>>> 1b82d5c (First Commit)
+### 4. Run the Development Server
+```bash
+npm run dev
+```
+
+Your site will run on [http://localhost:5173](http://localhost:5173) (or similar).
+
+---
+
+## 📄 Project Structure
+
+```
+src/
+│
+├── components/
+│   ├── HomePage.jsx
+│   ├── AboutPage.jsx
+│   ├── ServicesPage.jsx
+│   ├── Navbar.jsx
+│   └── Footer.jsx
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+---
+
+## 🔗 Suggested Routes (with React Router)
+If you’re using React Router:
+
+```jsx
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HomePage, AboutPage, ServicesPage } from "./components/Pages";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+```
+
+---
+
+## 🧾 Customization
+
+1. **Edit contact info** — in each component, update:
+   ```js
+   const PHONE_NUMBER = "";
+   const WHATSAPP_NUMBER = "";
+   const ADDRESS = "";
+   ```
+2. **Replace gallery placeholders** with real photos in `/public/images/`
+3. **Adjust colors** via Tailwind classes (`bg-orange-500`, `text-orange-600`, etc.)
+
+---
+
+## 💡 Future Enhancements
+
+- 📅 Add booking form (via EmailJS or Firebase)
+- 📷 Gallery page with image grid
+- 📍 Google Maps embed for location
+- 💬 Testimonials & customer feedback
+
+---
+
+## 👨‍🔧 Author
+
+**Bondre’s The Laundry House**  
+Website developed by **Rohit**  
+📞 Call / WhatsApp: `+91-XXXXXXXXXX`
+
+---
+
+### 🧡 Thank you for supporting local business!
