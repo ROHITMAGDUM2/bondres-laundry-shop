@@ -2,6 +2,26 @@ import React from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
+// Simple fade-in section component
+const FadeInSection: React.FC<{ delay?: number; children: React.ReactNode }> = ({ delay = 0, children }) => {
+  const [isVisible, setVisible] = React.useState(false);
+  React.useEffect(() => {
+    const timeout = setTimeout(() => setVisible(true), delay * 1000);
+    return () => clearTimeout(timeout);
+  }, [delay]);
+  return (
+    <div
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? "none" : "translateY(20px)",
+        transition: "opacity 0.7s ease, transform 0.7s ease",
+      }}
+    >
+      {children}
+    </div>
+  );
+};
+
 // === REPLACE THESE PLACEHOLDERS ===
 const PHONE_NUMBER = "+91-9527198630";
 const WHATSAPP_NUMBER = "+919527198630";
@@ -154,6 +174,62 @@ function Homepage() {
           </div>
         </div>
       </section>
+
+      {/* map */}
+
+      <FadeInSection delay={1.9}>
+        <section className="bg-orange-50">
+          <div className="max-w-6xl mx-auto px-6 py-12">
+            <h3 className="text-2xl font-bold">Map</h3>
+
+            {/* Grid Layout for Photo + Map */}
+            <div className="grid grid-cols-1 gap-4">
+              {/* House Photo */}
+              <div className="flex flex-col items-center">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!4v1759859045636!6m8!1m7!1sEaxCD4tlZnrdilrjTIKGPA!2m2!1d18.54532879315448!2d73.93937784091587!3f172.1389153643934!4f-6.969514937677985!5f2.372766989657717"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="rounded-lg mt-4"
+                />
+              </div>
+
+              {/* Google Map */}
+              <div className="flex flex-col items-center">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d801.5943899806359!2d73.93864926952236!3d18.545210270375147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDMyJzQyLjgiTiA3M8KwNTYnMjEuNSJF!5e1!3m2!1sen!2sin!4v1759859447087!5m2!1sen!2sin"
+                  width="100%"
+                  height="250"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="rounded-lg shadow-lg"
+                ></iframe>
+
+                {/* Buttons */}
+                <div className="flex gap-3 mt-3">
+                  <div className="mt-3">
+                    <a
+                      href="https://maps.app.goo.gl/6y6oBEpHhDhUZRpt6"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600 transition"
+                    >
+                      View on Map
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </FadeInSection>
 
       {/* FOOTER */}
       <Footer />
