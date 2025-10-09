@@ -227,7 +227,7 @@ function Homepage() {
                 <div className="flex gap-3 mt-3">
                   <div className="mt-3">
                     <a
-                      href="https://www.google.com/maps/@18.5453288,73.9393778,3a,75y,133.83h,87.62t/data=!3m7!1e1!3m5!1sEaxCD4tlZnrdilrjTIKGPA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D2.3821356293329927%26panoid%3DEaxCD4tlZnrdilrjTIKGPA%26yaw%3D133.8254887667771!7i13312!8i6656?entry=ttu&g_ep=EgoyMDI1MTAwNy4wIKXMDSoASAFQAw%3D%3D"
+                      href="https://www.google.com/maps/@18.5453127,73.9393013,3a,43.8y,110.06h,91.29t/data=!3m7!1e1!3m5!1slFSu1rbCCfE2322DdY8Osw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-1.294073036154586%26panoid%3DlFSu1rbCCfE2322DdY8Osw%26yaw%3D110.06301723337342!7i13312!8i6656?entry=ttu&g_ep=EgoyMDI1MTAwNy4wIKXMDSoASAFQAw%3D%3D"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600 transition"
