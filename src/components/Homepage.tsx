@@ -34,7 +34,7 @@ function Homepage() {
   const services: Service[] = [
     { title: "Washing & Ironing", desc: "Clothes washed and ironed neatly", price: "₹95/kg" },
     { title: "Dry Cleaning", desc: "Professional dry cleaning for special garments", price: "₹110/item" },
-    { title: "Pickup & Delivery", desc: "Free for orders above ₹250", price: "—" },
+    { title: "Pickup & Delivery", desc: "Fast doorstep pickup & drop.", price: "Free for orders above ₹250" },
   ];
 
   return (
@@ -70,8 +70,8 @@ function Homepage() {
             {/* Placeholder for hero image / mockup */}
             <div className="w-full h-64 md:h-80 rounded-2xl bg-orange-100 border border-orange-200 flex items-center justify-center">
               <div className="text-center text-orange-700">
-                <p className="font-semibold">Your clothes —</p>
-                <p className="text-2xl font-bold">Clean & Fresh</p>
+                <img src={"./img/shop11.jpg"} alt={"Your clothes — Clean & Fresh"}
+                  className="object-cover w-full h-64 md:h-80 rounded-2xl" />
               </div>
             </div>
           </div>
@@ -168,8 +168,20 @@ function Homepage() {
           <p className="text-gray-500 mt-2">Photos of the shop, team, and the cleaning process.</p>
 
           <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
-            {Array.from({ length: 4 }).map((_, i) => (
-              <div key={i} className="h-36 rounded-lg bg-white border border-orange-100 flex items-center justify-center text-sm text-gray-400">Photo {i + 1}</div>
+            {[
+              "./img/shop 1.jpg",
+              "./img/shop2.jpg",
+              "./img/shop3.jpg",
+              "./img/shop4.jpg",
+              "./img/shop5.jpg",
+              "./img/shop6.jpg",
+            ].map((src, i) => (
+              <div
+                key={i}
+                className="h-36 rounded-lg bg-white border border-orange-100 flex items-center justify-center text-sm text-gray-400">
+                <img src={src} alt={`Bondres The Laundry House Gallery ${i + 1}`}
+                  className="object-cover w-full h-36 hover:scale-105 transition-transform duration-300" />
+              </div>
             ))}
           </div>
         </div>
